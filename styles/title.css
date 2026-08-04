@@ -1,0 +1,10 @@
+/*заголовок страницы*/
+.title {
+  font-size: 70px;
+  line-height: 78px;
+  margin-bottom: 110px;
+  font-weight: 400;
+  margin-top: 220px;
+  display: block;
+  text-align:center;
+}

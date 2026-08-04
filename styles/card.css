@@ -1,0 +1,84 @@
+
+/*границы карточки товара + внешние отступы*/
+.products__item { 
+  /*margin: 22.5px так как общий отступ у карточек должен быть 45px*/
+  margin: 22.5px;
+  width: 340px;
+  height: auto;
+}
+
+/*значения внутренних отступов у карточки товара*/
+.card {
+  padding: 25px;
+  
+}
+
+/*значения цвета для карточки товара*/
+.card_color-backviolet {
+  background-color: #F7F7FA;
+}
+
+/*значения ширины и внешнего отступа для изображения товара*/
+.card__image {
+  width: 290;
+  margin-bottom: 30px;
+}
+
+/*значения отступов для блока с основным текстом*/
+.card__description-block {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+/*значения шрифта для категории товара*/
+.card__category {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 24px;
+  color: #A5A3B9;
+}
+
+/*значения шрифта для названия товара*/
+.card__name {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+}
+
+
+.card__compaund {
+  margin-bottom: 15px;
+}
+
+/*значения отступов для блока с составом товара*/
+.compaund__components {
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-bottom: 5px;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 25px;
+}
+
+/*значения отступов для блока с ценой товара*/
+.card__price{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*значения шрифта для слова "Цена"*/
+.card__price-value {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+/*значения шрифта для суммы товара*/
+.card__price-sum {
+  font-size: 20px;
+  line-height: 24px;
+}

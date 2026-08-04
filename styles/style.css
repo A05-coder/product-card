@@ -1,0 +1,22 @@
+/*общие  положения*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*шрифт*/
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #515076;
+  /*значения для фонового изображения: 1-путь; 2-свойство чтобы картинка не повторялась;*/
+  /*3-позиция картинки; 4-свойство что бы картинка стояла на месте когда страницу прокручивают;*/
+  background-image: url(/images/dandelion-background.png);
+  background-repeat: no-repeat;
+  background-position: 85px 0px;
+  background-attachment: fixed;
+}
