@@ -1,0 +1,89 @@
+/*применяем общие значения*/
+body {
+  font-family: Montserrar, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #515076;
+  background-repeat: no-repeat;
+  width: 1110px;
+}
+
+/*значения для заголовка страницы*/
+.title {
+  font-size: 70px;
+  line-height: 78px;
+  margin-bottom: 110px;
+  margin-top: 220px;
+  text-align: center;
+  display: block;
+}
+
+/*значения для карточки товара*/
+.product-card {
+  width: 290px;
+  height: auto;
+  padding: 25px;
+  background-color: #F7F7FA;
+}
+
+/*значения для изображения продукта*/
+.product-image {
+  width: 290;
+  margin-bottom: 30px;
+}
+
+/*значения для категории товара*/
+.category-product {
+  text-transform: uppercase;
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  color: #A5A3B9;
+}
+
+/*значения для названия товара*/
+.name-product {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/*значения для описания товара*/
+.description-product {
+margin-bottom: 15px;
+}
+
+/*значения для общего списка состава продукта*/
+.ul-nonestyle {
+  padding: 0;
+  list-style-position: inside;
+  list-style: circle;
+  margin-top: 5px;
+  margin-left: 13px;
+  margin-bottom: 25px;
+}
+
+/*значения для отдельных элементов состава продукта*/
+.producr-components {
+  margin-bottom: 5px
+}
+
+/*значения для слова "Цена"*/
+.value-product {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+/*значения для суммы*/
+.sum-product {
+  float: right;
+  font-size: 20px;
+  line-height: 24px;
+}
