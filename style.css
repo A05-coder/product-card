@@ -6,18 +6,17 @@
 }
 
 body {
-  /*шрифт*/
+  /*общие значения шрифта*/
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   color: #515076;
-  /*значения для фонового изображения: 1-путь; 2-свойство чтобы картинка не повторялась;*/
-  /*3-позиция картинки; 4-свойство что бы картинка стояла на месте когда страницу прокручивают;*/
-  background-image: url(/images/dandelion-background.png);
-  background-repeat: no-repeat;
-  background-position: 85px 0px;
-  background-attachment: fixed;
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: center;
 }
 
 /*заголовок страницы*/
@@ -31,10 +30,27 @@ body {
   text-align:center;
 }
 
-/*ограничение границ страницы*/
+/*ограничение границ страницы и фоновая картинка*/
 .main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 1280px;
   height: 1715px;
+  /*значения для фонового изображения: 1-путь; 2-свойство чтобы картинка не повторялась;*/
+  /*3-позиция картинки; 4-свойство что бы картинка стояла на месте когда страницу прокручивают;*/
+  background-image: url(/images/dandelion-background.png);
+  background-repeat: no-repeat;
+  background-position: 85px 0px;
+  background-attachment: fixed;
+  background-size: auto;
+}
+
+/*границы той части страницы где будут карточки с товарами*/
+.container {
+  width: 1110px;
+  height: 100%;
+  margin: 0px;
 }
 
 /*положение карточек с товарами на странице*/ 
@@ -42,14 +58,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 45;
+  gap: 45px;
 }
 
 
 /*границы карточки товара + внешние отступы*/
 .products__item { 
-  /*margin: 22.5px так как общий отступ у карточек должен быть 45px*/
-  margin: 22.5px;
   width: 340px;
   height: auto;
 }
@@ -57,12 +71,19 @@ body {
 /*значения внутренних отступов у карточки товара*/
 .card {
   padding: 25px;
-  
 }
 
 /*значения цвета для карточки товара*/
 .card_color-backviolet {
   background-color: #F7F7FA;
+}
+
+.card_color-backgreen {
+  background-color: #bde9be;
+}
+
+.card_color-backblue {
+  background-color: #bebde9;
 }
 
 /*значения ширины и внешнего отступа для изображения товара*/
@@ -128,4 +149,40 @@ body {
 .card__price-sum {
   font-size: 20px;
   line-height: 24px;
+}
+
+/*стилизация для кнопок*/
+.button-settings {
+  width: 340px;
+  height: auto;
+  padding: 25px;
+  background-color: #bebde9;
+  color: #515076;
+  font-size: 30px;
+  font-weight:700;
+  text-align: center;
+  text-transform: uppercase;
+  border: 3px solid #515076;
+  border-radius: 15px;
+}
+
+/*расположение кнопок*/
+.button-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: center;
+}
+
+/*перекраска слова "Google"*/
+.button-settings span:nth-child(1) {color: blue;}
+.button-settings span:nth-child(2) {color: red;}
+.button-settings span:nth-child(3) {color: yellow;}
+.button-settings span:nth-child(4) {color: blue;}
+.button-settings span:nth-child(5) {color: green;}
+.button-settings span:nth-child(6) {color: red;}
+
+/*второй цвет для пятой кнопки*/
+.button-color {
+  background-color: #bde9be;
 }
