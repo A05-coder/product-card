@@ -10,155 +10,168 @@
     <title>products</title>
   </head>
   
-  <body>
     <!--блок для ограничения всей страницы размерами-->
     <main class="main">
-      <!--блок для значений заголовка страницы-->
-      <h1 class="title">Выбери свой продукт</h1>
-      <!--блок div для того чтобы правильно раставить карточки на странице-->
-      <div class="products">
+      <!--блок контейнер это та часть страницы, которая будет содержать основной контент-->
+      <div class="container">
         
-        <!--начало карточки товара-->
-        <div class="products__item card card_color-backviolet">
-          <img
+        <!--блок для значений заголовка страницы-->
+        <h1 class="title">Выбери свой продукт</h1>
+        
+        <!--блок div для того чтобы правильно раставить карточки на странице-->
+        <div class="products">
+        
+          <!--блок кнопок-->
+          <div class="button-layout">
+            <button class="button-settings" id="card-color-change-button">поменять цвет одной карточки</button>
+            <button class="button-settings" id="cards-color-change-button">поменять цвет всех карточек</button>
+            <button class="button-settings" id="open-google-button">открыть <span>g</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></button>
+            <button class="button-settings" id="console-output-button">вывести сообщение в консоль log</button>
+            <button class="button-settings" id="change-button-color-button">нажми что-бы поменять цвет этой кнопки</button>
+          </div>
+
+          <!--начало карточки товара-->
+          <div class="products__item card card_color-backviolet">
+            <img
             class="card__image"
             src="/images/moisturizing-mousse.png"
             alt="Увлажняющий мусс"/>
-          <!--основной текст-->
-          <div class="card__description-block">
-            <span class="card__category">для нормальной кожи</span>
-            <h2 class="card__name">Увлажняющий мусс</h2>
-            <p>Глубоко увлажняют кожу лица, оставляя<br>её мягкой и гладкой.</p>
+            <!--основной текст-->
+            <div class="card__description-block">
+              <span class="card__category">для нормальной кожи</span>
+              <h2 class="card__name">Увлажняющий мусс</h2>
+              <p>Глубоко увлажняют кожу лица, оставляя<br>её мягкой и гладкой.</p>
+            </div>
+            <!--блок состава-->
+            <div class="card__compaund compaund">
+              <ul class="compaund__components">
+                Состав:
+                <li>активные натуральные комплексы</li>
+                <li>витамины С, А, РР, В И Е</li>
+                <li>солнцезащитные компоненты</li>
+              </ul>
+            </div>
+            <!--блок цены-->
+            <div class="card__price">
+              <b class="card__price-value">Цена</b>
+              <span class="card__price-sum">2 750 &#8381;</span>
+            </div>
           </div>
-          <!--блок состава-->
-          <div class="card__compaund compaund">
-            <ul class="compaund__components">
-              Состав:
-              <li>активные натуральные комплексы</li>
-              <li>витамины С, А, РР, В И Е</li>
-              <li>солнцезащитные компоненты</li>
-            </ul>
-          </div>
-          <!--блок цены-->
-          <div class="card__price">
-            <b class="card__price-value">Цена</b>
-            <span class="card__price-sum">2 750 &#8381;</span>
-          </div>
-        </div>
 
-        <!--начало карточки товара-->
-        <div class="products__item card card_color-backviolet">
-          <img
+          <!--начало карточки товара-->
+          <div class="products__item card card_color-backviolet">
+            <img
             class="card__image"
             src="/images/moisturizing-mask.png"
             alt="Увлажняющяя маска"/>
-          <!--основной текст-->
-          <div class="card__description-block">
-            <span class="card__category">для нормальной кожи</span>
-            <h2 class="card__name">Увлажняющяя маска</h2>
-            <p>Способствует удерживанию влаги в<br>верхних слоях кожи.</p>
+            <!--основной текст-->
+            <div class="card__description-block">
+              <span class="card__category">для нормальной кожи</span>
+              <h2 class="card__name">Увлажняющяя маска</h2>
+              <p>Способствует удерживанию влаги в<br>верхних слоях кожи.</p>
+            </div>
+            <!--блок состава-->
+            <div class="card__compaund compaund">
+              <ul class="compaund__components">
+                Состав:
+                <li>воски</li>
+                <li>минералы</li>
+                <li>масла</li>
+              </ul>
+            </div>
+            <!--блок цены-->
+            <div class="card__price">
+              <b class="card__price-value">Цена</b>
+              <span class="card__price-sum">3 500 &#8381;</span>
+            </div>
           </div>
-          <!--блок состава-->
-          <div class="card__compaund compaund">
-            <ul class="compaund__components">
-              Состав:
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-          </div>
-          <!--блок цены-->
-          <div class="card__price">
-            <b class="card__price-value">Цена</b>
-            <span class="card__price-sum">3 500 &#8381;</span>
-          </div>
-        </div>
-          
-        <!--начало карточки товара-->
-        <div class="products__item card card_color-backviolet">
-          <img
+            
+          <!--начало карточки товара-->
+          <div class="products__item card card_color-backviolet">
+            <img
             class="card__image"
             src="/images/cleansing-gel.png"
             alt="Гель для умывания"/>
-          <!--основной текст-->
-          <div class="card__description-block">
-            <span class="card__category">для нормальной кожи</span>
-            <h2 class="card__name">Гель для умывания</h2>
-            <p>Интенсивно очищает, не повреждает<br>защитный барьер кожи.</p>
+            <!--основной текст-->
+            <div class="card__description-block">
+              <span class="card__category">для нормальной кожи</span>
+              <h2 class="card__name">Гель для умывания</h2>
+              <p>Интенсивно очищает, не повреждает<br>защитный барьер кожи.</p>
+            </div>
+            <!--блок состава-->
+            <div class="card__compaund compaund">
+              <ul class="compaund__components">
+                Состав:
+                <li>минералы</li>
+                <li>витамины С, А, РР, В И Е</li>
+                <li>солнцезащитные компоненты</li>
+              </ul>
+            </div>
+            <!--блок цены-->
+            <div class="card__price">
+              <b class="card__price-value">Цена</b>
+              <span class="card__price-sum">1 600 &#8381;</span>
+            </div>
           </div>
-          <!--блок состава-->
-          <div class="card__compaund compaund">
-            <ul class="compaund__components">
-              Состав:
-              <li>минералы</li>
-              <li>витамины С, А, РР, В И Е</li>
-              <li>солнцезащитные компоненты</li>
-            </ul>
-          </div>
-          <!--блок цены-->
-          <div class="card__price">
-            <b class="card__price-value">Цена</b>
-            <span class="card__price-sum">1 600 &#8381;</span>
-          </div>
-        </div>
 
-        <!--начало карточки товара-->
-        <div class="products__item card card_color-backviolet">
-          <img
+          <!--начало карточки товара-->
+          <div class="products__item card card_color-backviolet">
+            <img
             class="card__image"
             src="/images/gift-set-number-1.png"
             alt="Подарочный набор номер 1"/>
-          <!--основной текст-->
-          <div class="card__description-block">
-            <span class="card__category">для нормальной кожи</span>
-            <h2 class="card__name">Подарочный набор №1</h2>
-            <p>Набор, состоящий из увлажняющего<br>крема и маски.</p>
+            <!--основной текст-->
+            <div class="card__description-block">
+              <span class="card__category">для нормальной кожи</span>
+              <h2 class="card__name">Подарочный набор №1</h2>
+              <p>Набор, состоящий из увлажняющего<br>крема и маски.</p>
+            </div>
+            <!--блок состава-->
+            <div class="card__compaund compaund">
+              <ul class="compaund__components">
+                Состав:
+                <li>воски</li>
+                <li>минералы</li>
+                <li>масла</li>
+              </ul>
+            </div>
+            <!--блок цены-->
+            <div class="card__price">
+              <b class="card__price-value">Цена</b>
+              <span class="card__price-sum">4 750 &#8381;</span>
+            </div>
           </div>
-          <!--блок состава-->
-          <div class="card__compaund compaund">
-            <ul class="compaund__components">
-              Состав:
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-          </div>
-          <!--блок цены-->
-          <div class="card__price">
-            <b class="card__price-value">Цена</b>
-            <span class="card__price-sum">4 750 &#8381;</span>
-          </div>
-        </div>
 
-        <!--начало карточки товара-->
-        <div class="products__item card card_color-backviolet">
-          <img
+          <!--начало карточки товара-->
+          <div class="products__item card card_color-backviolet">
+            <img
             class="card__image"
             src="/images/gift-set-number-5.png"
             alt="Подарочный набор номер 5"/>
-          <!--основной текст-->
-          <div class="card__description-block">
-            <span class="card__category">для нормальной кожи</span>
-            <h2 class="card__name">Подарочный набор №5</h2>
-            <p>Весь набор средств Invisible symphony,<br>крем, маска, мусс и гель для умывания.</p>
+            <!--основной текст-->
+            <div class="card__description-block">
+              <span class="card__category">для нормальной кожи</span>
+              <h2 class="card__name">Подарочный набор №5</h2>
+              <p>Весь набор средств Invisible symphony,<br>крем, маска, мусс и гель для умывания.</p>
+            </div>
+            <!--блок состава-->
+            <div class="card__compaund compaund">
+              <ul class="compaund__components">
+                Состав:
+                <li>воски</li>
+                <li>минералы</li>
+                <li>масла</li>
+              </ul>
+            </div>
+            <!--блок цены-->
+            <div class="card__price">
+              <b class="card__price-value">Цена</b>
+              <span class="card__price-sum">7 520 &#8381;</span>
+            </div>
           </div>
-          <!--блок состава-->
-          <div class="card__compaund compaund">
-            <ul class="compaund__components">
-              Состав:
-              <li>воски</li>
-              <li>минералы</li>
-              <li>масла</li>
-            </ul>
-          </div>
-          <!--блок цены-->
-          <div class="card__price">
-            <b class="card__price-value">Цена</b>
-            <span class="card__price-sum">7 520 &#8381;</span>
-          </div>
+          
         </div>
-        
-      </div>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
