@@ -1,3 +1,50 @@
+/*общие  положения*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*шрифт*/
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #515076;
+  /*значения для фонового изображения: 1-путь; 2-свойство чтобы картинка не повторялась;*/
+  /*3-позиция картинки; 4-свойство что бы картинка стояла на месте когда страницу прокручивают;*/
+  background-image: url(/images/dandelion-background.png);
+  background-repeat: no-repeat;
+  background-position: 85px 0px;
+  background-attachment: fixed;
+}
+
+/*заголовок страницы*/
+.title {
+  font-size: 70px;
+  line-height: 78px;
+  margin-bottom: 110px;
+  font-weight: 400;
+  margin-top: 220px;
+  display: block;
+  text-align:center;
+}
+
+/*ограничение границ страницы*/
+.main {
+  width: 1280px;
+  height: 1715px;
+}
+
+/*положение карточек с товарами на странице*/ 
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45;
+}
+
 
 /*границы карточки товара + внешние отступы*/
 .products__item { 
