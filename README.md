@@ -5,5 +5,4 @@
 # feature/05-homework - использовал методологию БЭМ. Страницы идентичны.
 # feature/06-homework - добавил кнопки и функционал.
 # feature/07-homework - добавил файл JS и добавил функции.
-(Homework №7): Added a JavaScript file and added functions
 
