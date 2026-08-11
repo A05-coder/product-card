@@ -7,12 +7,12 @@ cardColorChangeButton.addEventListener('click', () => {
 });
 
 // КНОПКА №2: переключение цвета всех карточек
-const productsCardList = document.querySelectorAll('.card')
+const productsCard = document.querySelectorAll('.card')
 const cardsColorChangeButton = document.querySelector('#cards-color-change-button')
 
 cardsColorChangeButton.addEventListener('click', () => {
-  productsCardList.forEach(card => {
-    card.classList.toggle('card_color-backblue');
+  productsCard.forEach(card => {
+    card.class.toggle('card_color-backblue');
   })
 });
 
@@ -33,16 +33,16 @@ const consoleOutputButton = document.querySelector('#console-output-button')
 
 consoleOutputButton.addEventListener('click', () => consoleOutput('Сообщение выведено в консоль log!'));
 
-function consoleOutput(massage) {
+function consoleOutput(message) {
   alert('это сделано с помощью alert')
-  console.log(massage);
+  console.log(message);
 }
 
 // КНОПКА №5: переключение цвета данной кнопки
-const btn = document.querySelector('#change-button-color-button');
+const changeButtonColorButton = document.querySelector('#change-button-color-button');
 
-btn.addEventListener('click', () => {
-  btn.classList.toggle('button-color')
+changeButtonColorButton.addEventListener('click', () => {
+  changeButtonColorButton.classList.toggle('button-color')
 });
 
 // вывод текста заголовка в консоль при наведении мыши
