@@ -8,12 +8,15 @@ cityTemperature('Симферополе', 32)
 const SPEED_OF_LIGHT = 299792458
 
 function speedTest(speed) {
-  if (speed >= SPEED_OF_LIGHT)
+  if (speed > SPEED_OF_LIGHT) {
     console.log("Сверхсветовая скорость")
-  else if (speed === SPEED_OF_LIGHT)
+  }
+  else if (speed === SPEED_OF_LIGHT) {
     console.log("Скорость света")
-  else 
+  }
+  else {
     console.log("Субсветовая скорость")
+  }
 }
 speedTest(345)
 
@@ -22,11 +25,13 @@ let apple = "Яблоко"
 let prise = 5
 
 function currentBudget (budget) {
-  if (budget >= prise)
+  if (budget >= prise) {
     console.log(`${apple} приобретено. Спасибо за покупку!`)
-  else 
+  }
+  else {
     console.log(`Вам не хватает ${prise - budget}$, пополните баланс.`)
-}
+  }
+  }
 currentBudget(3)
 
 //задание 5-ое

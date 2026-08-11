@@ -12,7 +12,6 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: #515076;
-  
   display: flex;
   flex-wrap: wrap;
   gap: 45px;
@@ -60,7 +59,6 @@ body {
   justify-content: center;
   gap: 45px;
 }
-
 
 /*границы карточки товара + внешние отступы*/
 .products__item { 
