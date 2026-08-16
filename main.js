@@ -12,7 +12,7 @@ const cardsColorChangeButton = document.querySelector('#cards-color-change-butto
 
 cardsColorChangeButton.addEventListener('click', () => {
   productsCard.forEach(card => {
-    card.class.toggle('card_color-backblue');
+    card.classList.toggle('card_color-backblue');
   })
 });
 
