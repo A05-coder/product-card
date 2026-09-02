@@ -1,4 +1,3 @@
-/*общие  положения*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +5,6 @@
 }
 
 body {
-  /*общие значения шрифта*/
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -18,7 +16,6 @@ body {
   justify-content: center;
 }
 
-/*заголовок страницы*/
 .title {
   font-size: 70px;
   line-height: 78px;
@@ -29,49 +26,41 @@ body {
   text-align: center;
 }
 
-/*ограничение границ страницы и фоновая картинка*/
 .main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 1280px;
   height: 1715px;
-  /*значения для фонового изображения: 1-путь; 2-свойство чтобы картинка не повторялась;*/
-  /*3-позиция картинки; 4-свойство что бы картинка стояла на месте когда страницу прокручивают;*/
-  background-image: url(/images/dandelion-background.png);
-  background-repeat: no-repeat;
-  background-position: 85px 0px;
-  background-attachment: fixed;
-  background-size: auto;
 }
 
-/*границы той части страницы где будут карточки с товарами*/
 .container {
   width: 1110px;
   height: 100%;
   margin: 0px;
+  background-image: url(/images/dandelion-background.png);
+  background-repeat: no-repeat;
+  background-position: 170px 0px;
+  background-attachment: fixed;
+  background-size: auto;
 }
 
-/*положение карточек с товарами на странице*/ 
-.products {
+#productCardList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 45px;
 }
 
-/*границы карточки товара + внешние отступы*/
 .products__item { 
   width: 340px;
   height: auto;
 }
 
-/*значения внутренних отступов у карточки товара*/
 .card {
   padding: 25px;
 }
 
-/*значения цвета для карточки товара*/
 .card_color-backviolet {
   background-color: #F7F7FA;
 }
@@ -84,13 +73,11 @@ body {
   background-color: #bebde9;
 }
 
-/*значения ширины и внешнего отступа для изображения товара*/
 .card__image {
   width: 290;
   margin-bottom: 30px;
 }
 
-/*значения отступов для блока с основным текстом*/
 .card__description-block {
   display: flex;
   flex-direction: column;
@@ -98,7 +85,6 @@ body {
   margin-bottom: 15px;
 }
 
-/*значения шрифта для категории товара*/
 .card__category {
   text-transform: uppercase;
   font-size: 12px;
@@ -106,19 +92,16 @@ body {
   color: #A5A3B9;
 }
 
-/*значения шрифта для названия товара*/
 .card__name {
   font-size: 20px;
   line-height: 27px;
   font-weight: 700;
 }
 
-
 .card__compaund {
   margin-bottom: 15px;
 }
 
-/*значения отступов для блока с составом товара*/
 .compaund__components {
   padding-left: 0px;
   margin-left: 0px;
@@ -130,30 +113,27 @@ body {
   margin-bottom: 25px;
 }
 
-/*значения отступов для блока с ценой товара*/
 .card__price{
   display: flex;
   justify-content: space-between;
 }
 
-/*значения шрифта для слова "Цена"*/
 .card__price-value {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
-/*значения шрифта для суммы товара*/
 .card__price-sum {
   font-size: 20px;
   line-height: 24px;
 }
 
-/*стилизация для кнопок*/
 .button-settings {
   width: 340px;
   height: auto;
   padding: 25px;
+  margin-bottom: 25px;
   background-color: #bebde9;
   color: #515076;
   font-size: 30px;
@@ -164,7 +144,6 @@ body {
   border-radius: 15px;
 }
 
-/*расположение кнопок*/
 .button-layout {
   display: flex;
   flex-wrap: wrap;
@@ -172,7 +151,6 @@ body {
   justify-content: center;
 }
 
-/*перекраска слова "Google"*/
 .button-settings span:nth-child(1) {color: blue;}
 .button-settings span:nth-child(2) {color: red;}
 .button-settings span:nth-child(3) {color: yellow;}
@@ -180,7 +158,6 @@ body {
 .button-settings span:nth-child(5) {color: green;}
 .button-settings span:nth-child(6) {color: red;}
 
-/*второй цвет для пятой кнопки*/
 .button-color {
   background-color: #bde9be;
 }
