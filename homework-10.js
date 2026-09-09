@@ -28,11 +28,11 @@ function renderProducts(productsArray) {
     img.alt = card.imageAlt;
     cardClone.querySelector('.card__category').textContent = card.category;
     cardClone.querySelector('.card__name').textContent = card.name;
-    cardClone.querySelector('.mainText').textContent = card.description;
-    cardClone.querySelector('.firstComponent').textContent = card.ingredients[0];
-    cardClone.querySelector('.secondComponent').textContent = card.ingredients[1];
-    cardClone.querySelector('.thirdComponent').textContent = card.ingredients[2];
-    cardClone.querySelector('.card__price-sum').textContent = `${card.price.toLocaleString()} \u20BD`; 
+    cardClone.querySelector('.card__main-text').textContent = card.description;
+    cardClone.querySelector('.compaund_first-component').textContent = card.ingredients[0];
+    cardClone.querySelector('.compaund_second-component').textContent = card.ingredients[1];
+    cardClone.querySelector('.compaund_third-component').textContent = card.ingredients[2];
+    cardClone.querySelector('.card__price_sum').textContent = `${card.price.toLocaleString()} \u20BD`; 
     productCardList.appendChild(cardClone);
   });
 }

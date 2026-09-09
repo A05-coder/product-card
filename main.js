@@ -1,19 +1,19 @@
 // КНОПКА №1: переключение цвета только первой карточки
-const productCard = document.querySelector('.card')
-const cardColorChangeButton = document.querySelector('#card-color-change-button')
-
+const cardColorChangeButton = document.querySelector('#card-color-change-button');
 cardColorChangeButton.addEventListener('click', () => {
-  productCard.classList.toggle('card_color-backgreen');
+  const productCard = document.querySelector('.card');
+  if (productCard) {
+    productCard.classList.toggle('card_color-backgreen');
+  }
 });
 
 // КНОПКА №2: переключение цвета всех карточек
-const productsCard = document.querySelectorAll('.card')
-const cardsColorChangeButton = document.querySelector('#cards-color-change-button')
-
+const cardsColorChangeButton = document.querySelector('#cards-color-change-button');
 cardsColorChangeButton.addEventListener('click', () => {
+  const productsCard = document.querySelectorAll('.card');
   productsCard.forEach(card => {
     card.classList.toggle('card_color-backblue');
-  })
+  });
 });
 
 // КНОПКА №3: открытие страницы google.com в новой вкладке
