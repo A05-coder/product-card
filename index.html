@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="style.css"/>
     <title>products</title>
   </head>
+
   <body>
     <main class="main">
       <div class="container">
+        
+        <button type="button" class="open-modal-button registration-button-settings">Регистрация</button>
+        
         <h1 class="title">Выбери свой продукт</h1>
+        
         <div class="button-layout">
           <button class="button-settings" id="card-color-change-button">поменять цвет одной карточки</button>
           <button class="button-settings" id="cards-color-change-button">поменять цвет всех карточек</button>
           <button class="button-settings" id="open-google-button">открыть <span>g</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></button>
           <button class="button-settings" id="console-output-button">вывести сообщение в консоль log</button>
-          <button class="button-settings" id="change-button-color-button">нажми что-бы поменять цвет этой кнопки</button>
+          <button class="button-settings" id="change-button-color-button">поменять цвет этой кнопки</button>
         </div>
+        
         <div id="productCardList">
           <template id="productCard-template">
             <div class="products__item card card_color-backviolet">
@@ -30,29 +36,128 @@
               <div class="card__description-block">
                 <span class="card__category"></span>
                 <h2 class="card__name"></h2>
-                <p class="mainText"></p>
+                <p class="card__main-text"></p>
               </div>
               <div class="card__compaund compaund">
                 <span>Состав:</span>
                 <ul class="compaund__components">
-                  <li class="firstComponent"></li>
-                  <li class="secondComponent"></li>
-                  <li class="thirdComponent"></li>
+                  <li class="compaund_first-component"></li>
+                  <li class="compaund_second-component"></li>
+                  <li class="compaund_third-component"></li>
                 </ul>
               </div>
               <div class="card__price">
-                <b class="card__price-value">Цена</b>
-                <span class="card__price-sum"></span>
+                <b class="card__price_value">Цена</b>
+                <span class="card__price_sum"></span>
               </div>
             </div>
           </template>
         </div>
       </div>
     </main>
+
+    <footer class="footer">
+      <div class="footer__global-block">
+        <div class="footer__row">
+          
+          <div class="footer__left-block">
+            <h2 class="footer__title">Product Cards</h2>
+            <p class="footer__motto">У нас самые лучшие продукты для кожи!</p>
+            <div class="footer__icon-layout">
+              <img class="footer__icon-image_tg" src="/images/telegram-icon.png"/>
+              <img class="footer__icon-image_vk" src="/images/vkontakte-icon.png"/>
+            </div>
+          </div>
+          
+          <div class="footer__middle-block">
+            <label class="footer__subscribe-label" for="footer-email">
+              <p class="footer__input-suggestion">Подпишись на наши акции:</p>
+            </label>
+            <form id="subscribe-form">
+              <input name="user-email"
+                class="footer__input-field" 
+                id="footer-email" 
+                placeholder="Введи Email..." 
+                type="email" 
+                required>
+              <span class="divider">|</span>
+              <button class="footer__subscribe-button" type="submit">Подписаться</button>
+            </form>
+          </div>
+          
+          <div class="footer__navigation-block">
+            <nav>
+              <ul class="footer__navigation-list">
+                <span class="footer__navigation-title">Быстрые ссылки</span>
+                <li>Главная</li>
+                <li>Магазин</li>
+                <li>Контакты</li>
+              </ul>
+            </nav>
+          </div>
+        
+        </div>
+        
+        <div class="footer__lower-unit">
+          <span class="footer__dividing-line"></span>
+          <span class="footer__link">www.product-cards.com©all right reserved</span>
+        </div>
+
+      </div>
+    </footer>
+
+    <div class="modal" id="registration-modal">
+      <div class="overlay"></div>
+      <div class="modal-content">
+        
+        <button type="button" class="close-modal-button">&times;</button>
+        
+        <h2>Регистрация</h2>
+        
+        <form class="registration-form" novalidate>
+          
+          <div class="form-group">
+            <label for="reg-firstname">Имя:</label>
+            <input type="text" id="reg-firstname" name="firstname" placeholder="Хаким" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-lastname">Фамилия:</label>
+            <input type="text" id="reg-lastname" name="lastname" placeholder="Караманов" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-dob">Дата рождения:</label>
+            <input type="date" id="reg-dob" name="dob" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-login">Логин:</label>
+            <input type="text" id="reg-login" name="login" placeholder="Hakim_Abu_Muhammad" minlength="4" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-password">Пароль:</label>
+            <input type="password" id="reg-password" name="password" placeholder="пароль" minlength="6" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-password-confirm">Повторите пароль:</label>
+            <input type="password" id="reg-password-confirm" name="passwordConfirm" placeholder="повтор пароля" required>
+          </div>
+
+          <button type="submit" class="registration-button">Зарегистрироваться</button>
+        </form>
+
+      </div>
+    </div>
+
     <script src="main.js"></script>
     <script src="homework-7.js" defer></script>
     <script src="homework-8.js" defer></script>
     <script src="homework-9.js" defer type="module"></script>
     <script src="homework-10.js" defer type="module"></script>
+    <script src="homework-11.js" defer type="module"></script>
+
   </body>
 </html>
