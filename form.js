@@ -15,7 +15,16 @@ export class Form {
   }
 
   isValid() {
-    return this.form.checkValidity();
+    if (!this.form.checkValidity()) {
+      return false;
+    }
+
+    const values = this.getValues();
+    if (values.password !== values.passwordConfirm) {
+      return false;
+    }
+
+    return true;
   }
 
   reset() {

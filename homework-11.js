@@ -50,11 +50,6 @@ regForm.form.addEventListener('submit', function (event) {
 
   const values = regForm.getValues();
 
-  if (values.password !== values.passwordConfirm) {
-    alert(ERROR_REGISTRATION_PASSWORD_MISMATCH);
-    return;
-  }
-
   const userData = { ...values };
   delete userData.passwordConfirm;
   userData.createdOn = new Date();
