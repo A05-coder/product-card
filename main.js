@@ -1,3 +1,4 @@
+import "./homework-13.js";
 // КНОПКА №1: переключение цвета только первой карточки
 const cardColorChangeButton = document.querySelector('#card-color-change-button');
 cardColorChangeButton.addEventListener('click', () => {
