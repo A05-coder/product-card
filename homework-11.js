@@ -1,3 +1,6 @@
+import { Modal } from './Modal.js';
+import { Form } from './form.js';
+
 const ERROR_EMPTY_FIELD = "Поле не должно быть пустым";
 const ERROR_INVALID_EMAIL = "Некорректный формат email";
 const ERROR_REGISTRATION_INVALID_FORM = "Регистрация отклонена: Пожалуйста, заполните все поля корректно.";
@@ -10,84 +13,52 @@ const emailInput = document.getElementById('footer-email');
 
 subscribeForm.addEventListener('submit', function (event) {
   event.preventDefault();
-
   const emailValue = emailInput.value.trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (emailValue === '') {
-    alert(ERROR_EMPTY_FIELD);
+  if (emailValue === '') { return alert(ERROR_EMPTY_FIELD); }
+  if (!emailRegex.test(emailValue)) { return alert(ERROR_INVALID_EMAIL); }
 
-    return;
-  }
-
-  if (!emailRegex.test(emailValue)) {
-    alert(ERROR_INVALID_EMAIL);
-
-    return;
-  }
-
-  const result = {
-    email: emailValue
-  };
-
-  console.log(result);
-
+  console.log({ email: emailValue });
   subscribeForm.reset();
 });
 
 let user = null;
 
-const modal = document.getElementById('registration-modal');
+const regModal = new Modal('registration-modal');
+const regForm = new Form('registration-form');
+
 const openModalButton = document.querySelector('.open-modal-button');
-const closeModalButton = document.querySelector('.close-modal-button');
 const overlay = document.querySelector('.overlay');
-const form = document.querySelector('.registration-form');
-const passwordInput = document.getElementById('reg-password');
-const passwordConfirmInput = document.getElementById('reg-password-confirm');
 
-function openModal() {
-  modal.classList.add('modal-showed');
-}
+openModalButton.addEventListener('click', () => {
+  regModal.open();
+});
 
-function closeModal() {
-  modal.classList.remove('modal-showed');
+overlay.addEventListener('click', () => {
+  regModal.close();
+  regForm.reset();
+});
 
-  form.reset(); 
-}
-
-openModalButton.addEventListener('click', openModal);
-closeModalButton.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-form.addEventListener('submit', function (event) {
+regForm.form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  if (!form.checkValidity()) {
+  if (!regForm.isValid()) {
     alert(ERROR_REGISTRATION_INVALID_FORM);
-
     return;
   }
 
-  if (passwordInput.value !== passwordConfirmInput.value) {
-    alert(ERROR_REGISTRATION_PASSWORD_MISMATCH);
+  const values = regForm.getValues();
 
-    return;
-  }
-
-  const formData = new FormData(form);
-  const userData = {};
-  
-  formData.forEach((value, key) => {
-    if (key !== 'passwordConfirm') {
-      userData[key] = value;
-    }
-  });
-
+  const userData = { ...values };
+  delete userData.passwordConfirm;
   userData.createdOn = new Date();
+  
   user = userData;
 
   console.log(SUCCESS_USER_REGISTERED, user);
   alert(SUCCESS_REGISTRATION_COMPLETE);
 
-  closeModal();
+  regForm.reset();
+  regModal.close();
 });
