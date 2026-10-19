@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Хаким",
+      "surname": "Караманов",
+      "email": "hakimkaramanov@gmail.com",
+      "age": 18,
+      "city": "Симферополь",
+      "phone": "+7 (999) 111-11-11",
+      "registrationDate": "30-09-2026"
+    },
+    {
+      "id": 2,
+      "name": "Эмин",
+      "surname": "Мамутов",
+      "email": "emin.mamutov@gmail.com",
+      "age": 24,
+      "city": "Севастополь",
+      "phone": "+7 (999) 222-22-22",
+      "registrationDate": "30-09-2026"
+    },
+    {
+      "id": 3,
+      "name": "Сервер",
+      "surname": "Измайлов",
+      "email": "sergey.izmaylov@gmail.com",
+      "age": 35,
+      "city": "Ялта",
+      "phone": "+7 (999) 555-55-55",
+      "registrationDate": "30-09-2026"
+    },
+    {
+      "id": 4,
+      "name": "Али",
+      "surname": "Таку",
+      "email": "ali.taku@gmail.com",
+      "age": 31,
+      "city": "Симферополь",
+      "phone": "+7 (999) 444-44-44",
+      "registrationDate": "30-09-2026"
+    }
+  ]
+}
